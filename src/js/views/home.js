@@ -1,15 +1,39 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
+import React, { useContext } from 'react'
+import { Card, Button, Col } from 'react-bootstrap';
+import { Context } from '../store/appContext' //API access
+// import Card from 'react-bootstrap/Card'
+import { Cards } from "../component/Card";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+export const Home = () => {
+	const {store, actions} = useContext(Context)
+	// const planetImg = 'https://starwars-visualguide.com/assets/img/planets/' + planet[i] + '.jpg';
+	return (
+		<>
+			<div className='flex-row d-flex w-100 overflow-scroll'>
+				{store.planets.map((planet, i) => {
+				return (
+					<div>      
+						<Cards key={i} name={planet.name} population={planet.population} url={planet.url.replace(/\D/g,'')}/>
+					</div>
+				)})}    
+			</div>
+			<div className='flex-row d-flex w-100 overflow-scroll'>
+				{store.species.map((specie, i) => {
+				return (
+					<div>      
+						<Cards key={i} name={specie.name}  />
+					</div>
+				)})}    
+			</div>
+			<div className='flex-row d-flex w-100 overflow-scroll'>
+				{store.vehicles.map((vehicle, i) => {
+				return (
+					<div>      
+						<Cards key={i} name={vehicle.name}  />
+					</div>
+				)})}    
+			</div>
+  </>
+	)
+  
+	    };

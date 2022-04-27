@@ -7,6 +7,8 @@ import "../styles/index.css";
 
 //import your own components
 import Layout from "./layout";
+// import Cards from "./views/Cards";
 
 //render your react application
+// THIS ROUTES TO "template.html"
 ReactDOM.render(<Layout />, document.querySelector("#app"));

@@ -12,7 +12,7 @@ export const Navbar = () => {
 			<img className="logo" src='https://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo-1.png' />
 			{/* <NavDropdown className="fa fa-heart text-danger" title="♥ Favorites" id="basic-nav-dropdown">				 */}
 			{/* <NavDropdown className="material-symbols-outlined"  title="favorite FAVORITES" id="basic-nav-dropdown"> */}
-			<NavDropdown title="Favorite" id="basic-nav-dropdown">
+			<NavDropdown title="Favorites" id="basic-nav-dropdown">
 			{/* <i className="fa fa-heart text-danger" /> */}
 				<NavDropdown.Item href="#action/3.1">Favorite1</NavDropdown.Item>
 				<NavDropdown.Item href="#action/3.2">Favorite2</NavDropdown.Item>

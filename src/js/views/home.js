@@ -13,7 +13,7 @@ export const Home = () => {
 				{store.planets.map((planet, i) => {
 				return (
 					<div>      
-						<Cards key={i} name={planet.name} population={planet.population} url={planet.url.replace(/\D/g,'')}/>
+						<Cards key={i} name={planet.name} population={planet.population} url={planet.url.replace(/\D/g,'')} climate={planet.climate}/>
 					</div>
 				)})}    
 			</div>
@@ -21,7 +21,7 @@ export const Home = () => {
 				{store.species.map((specie, i) => {
 				return (
 					<div>      
-						<Cards key={i} name={specie.name}  />
+						<Cards key={i} name={specie.name} classification={specie.classification} language={specie.language} />
 					</div>
 				)})}    
 			</div>
@@ -29,11 +29,11 @@ export const Home = () => {
 				{store.vehicles.map((vehicle, i) => {
 				return (
 					<div>      
-						<Cards key={i} name={vehicle.name}  />
+						<Cards key={i} name={vehicle.name} model={vehicle.model} passengers={vehicle.passengers} />
 					</div>
 				)})}    
 			</div>
-  </>
+  		</>
 	)
   
-	    };
+};

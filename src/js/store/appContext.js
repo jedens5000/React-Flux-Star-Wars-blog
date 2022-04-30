@@ -24,6 +24,7 @@ const injectContext = PassedComponent => {
 		useEffect(() => {
 			state.actions.getSpecies();
 			state.actions.getPlanets();
+			// state.actions.getPlanetsId();
 			state.actions.getVehicles();
 			/**
 			 * EDIT THIS!

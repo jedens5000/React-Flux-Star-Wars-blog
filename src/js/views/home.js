@@ -13,7 +13,8 @@ export const Home = () => {
 				{store.planets.map((planet, i) => {
 				return (
 					<div>      
-						<Cards key={i} name={planet.name} population={planet.population} url={planet.url.replace(/\D/g,'')} climate={planet.climate}/>
+						{/* <Cards key={planet.id} name={planet.name} population={planet.population} climate={planet.climate} url={planet.url.replace(/\D/g,'')} /> */}
+						<Cards key={planet.id} name={planet.name} population={planet.population} climate={planet.climate} url={planet.url} id={planet.id} />
 					</div>
 				)})}    
 			</div>
@@ -21,15 +22,15 @@ export const Home = () => {
 				{store.species.map((specie, i) => {
 				return (
 					<div>      
-						<Cards key={i} name={specie.name} classification={specie.classification} language={specie.language} />
+						<Cards key={specie.id} name={specie.name} classification={specie.classification} language={specie.language} url={specie.url} />
 					</div>
 				)})}    
 			</div>
 			<div className='flex-row d-flex w-100 overflow-scroll'>
 				{store.vehicles.map((vehicle, i) => {
 				return (
-					<div>      
-						<Cards key={i} name={vehicle.name} model={vehicle.model} passengers={vehicle.passengers} />
+					<div>						   
+						<Cards key={vehicle.id} name={vehicle.name} model={vehicle.model} passengers={vehicle.passengers} url={vehicle.url} />
 					</div>
 				)})}    
 			</div>

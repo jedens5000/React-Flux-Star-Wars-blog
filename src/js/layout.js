@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
@@ -12,6 +12,8 @@ import { Footer } from "./component/footer";
 import Planets from "./views/Planets";
 import Species from "./views/Species";
 import Vehicles from "./views/Vehicles";
+import error404 from "../img/404errorStarWars.png";
+import tatooine from "../img/tatooine.jpg";
 
 //create your first component
 const Layout = () => {
@@ -40,7 +42,9 @@ const Layout = () => {
 							<Vehicles />
 						</Route>
 						<Route>
-							<h1>Not found!</h1>
+							<Link to='/' className="center">
+								<img src={error404} />
+							</Link>	
 						</Route>
 					</Switch>
 					<Footer />

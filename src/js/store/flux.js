@@ -27,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						// console.log(data)
 						setStore({
 							planets: data.results,
-							store: data.next,
+							// store: data.next,
 						});
 					})
 					.then(() => console.log(getStore().planets))
